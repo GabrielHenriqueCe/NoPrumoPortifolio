@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" class="no-js">
+<html lang="pt-BR" class="no-js" data-theme="light">
 <head>
   <meta charset="utf-8">
   <script>
@@ -7,14 +7,14 @@
       var d = document.documentElement, t = null;
       d.classList.remove('no-js');
       try { t = localStorage.getItem('np-theme'); } catch (e) {}
-      if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      if (t !== 'light' && t !== 'dark') t = 'light';
       d.setAttribute('data-theme', t);
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>No Prumo · Portfólio</title>
   <meta name="description" content="Portfólio do No Prumo, sistema de gestão de obras em .NET 8, React e MySQL desenvolvido no Projeto Integrador Entra21.">
-  <meta name="theme-color" content="#10161c">
+  <meta name="theme-color" content="#f3f1ec">
   <meta property="og:title" content="No Prumo · Portfólio">
   <meta property="og:description" content="Sistema de gestão de obras em .NET 8, React e MySQL. Projeto Integrador Entra21.">
   <meta property="og:type" content="website">
