@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <script>document.documentElement.classList.remove('no-js')</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>No Prumo · Gestão de Obras</title>
-  <meta name="description" content="No Prumo tira do papel o registro diário da obra: etapa, material, ponto e EPI. O custo real aparece na tela antes do fechamento.">
+  <title>No Prumo · Portfólio</title>
+  <meta name="description" content="Portfólio do No Prumo, sistema de gestão de obras em .NET 8, React e MySQL desenvolvido no Projeto Integrador Entra21.">
   <meta name="theme-color" content="#10161c">
-  <meta property="og:title" content="No Prumo · Gestão de Obras">
-  <meta property="og:description" content="O registro diário da obra fora do papel e o custo real na tela antes do fechamento.">
+  <meta property="og:title" content="No Prumo · Portfólio">
+  <meta property="og:description" content="Sistema de gestão de obras em .NET 8, React e MySQL. Projeto Integrador Entra21.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
@@ -27,12 +27,13 @@
         <span translate="no">No Prumo</span>
       </a>
       <nav class="nav" aria-label="Seções">
-        <a href="#problema">Problema</a>
-        <a href="#solucao">Solução</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#equipe">Equipe</a>
+        <a href="#projeto">Projeto</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#arquitetura">Arquitetura</a>
+        <a href="#decisoes">Decisões</a>
+        <a href="#stack">Stack</a>
       </nav>
-      <a class="btn btn-gold btn-sm" href="#equipe">Conheça a Equipe</a>
+      <a class="btn btn-gold btn-sm" href="#equipe">Equipe</a>
     </div>
   </header>
 
@@ -42,16 +43,23 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Projeto Integrador · <span translate="no">Entra21</span></p>
-          <h1>Sua obra, <span class="gold">no prumo.</span></h1>
-          <p class="lead">Sistema de gestão de obras que tira do papel o registro diário do canteiro: etapa, material, ponto e EPI. O custo real aparece na tela antes do fechamento.</p>
+          <p class="eyebrow">Projeto Integrador · <span translate="no">Entra21</span> · 2026</p>
+          <h1><span translate="no">No Prumo</span></h1>
+          <p class="hero-sub">Sistema de gestão de obras</p>
+          <p class="lead">Aplicação web completa, do banco de dados à interface, que tira do papel o registro diário do canteiro: etapa, material, ponto e EPI. Cada perfil vê só o que precisa, e o custo real de cada obra aparece antes do fechamento.</p>
+          <ul class="hero-tags" aria-label="Tecnologias principais">
+            <li translate="no">C# · .NET 8</li>
+            <li translate="no">React</li>
+            <li translate="no">MySQL 8</li>
+            <li>Clean Architecture</li>
+          </ul>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#solucao">Conheça o Sistema</a>
-            <a class="btn btn-ghost" href="#equipe">Conheça a Equipe</a>
+            <a class="btn btn-gold" href="#projeto">Ver o Projeto</a>
+            <a class="btn btn-ghost" href="#equipe">Conhecer a Equipe</a>
           </div>
         </div>
 
-        <figure class="mock reveal" aria-label="Exemplo ilustrativo do painel da administração">
+        <figure class="mock reveal" aria-label="Ilustração do painel da administração">
           <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="mock-body">
             <p class="mock-label">Painel da empresa</p>
@@ -71,139 +79,180 @@
       </div>
     </section>
 
-    <!-- NÚMEROS -->
-    <section class="stats-band" aria-label="O setor em números">
-      <div class="container stats-grid">
-        <div class="stat reveal"><span class="stat-num">7 em 10</span><span class="stat-txt">construtoras no nível digital mais básico</span><span class="stat-src">BIM Fórum Brasil · CBIC, 2025</span></div>
-        <div class="stat reveal"><span class="stat-num">+6,56%</span><span class="stat-txt">no custo da obra em 12 meses</span><span class="stat-src">FGV IBRE · INCC-M, ago/2026</span></div>
-        <div class="stat reveal"><span class="stat-num red">806 mil</span><span class="stat-txt">acidentes de trabalho em 2025, recorde</span><span class="stat-src">Ministério do Trabalho, 2026</span></div>
-        <div class="stat reveal"><span class="stat-num">70.508</span><span class="stat-txt">processos de hora extra, tema nº&nbsp;1 no TST</span><span class="stat-src">TST, 2025</span></div>
+    <!-- NÚMEROS DO PROJETO -->
+    <section class="facts" aria-label="O projeto em números">
+      <div class="container facts-grid">
+        <div class="fact reveal"><span class="fact-num">36</span><span class="fact-txt">entidades de domínio</span></div>
+        <div class="fact reveal"><span class="fact-num">37</span><span class="fact-txt">tabelas no MySQL</span></div>
+        <div class="fact reveal"><span class="fact-num">6</span><span class="fact-txt">perfis de acesso</span></div>
+        <div class="fact reveal"><span class="fact-num">8</span><span class="fact-txt">permissões granulares</span></div>
+        <div class="fact reveal"><span class="fact-num">4</span><span class="fact-txt">camadas de arquitetura</span></div>
       </div>
     </section>
 
-    <!-- PROBLEMA -->
-    <section class="section" id="problema">
+    <!-- O PROJETO -->
+    <section class="section" id="projeto">
       <div class="container">
-        <p class="eyebrow">O problema</p>
-        <h2 class="reveal">Quatro furos no registro do dia</h2>
-        <div class="grid-2">
-          <article class="card card-row reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5v-17Z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>
-            <div><h3>O papel some</h3><p>A folha do dia molha, rasga ou fica na caminhonete. A prova do gasto vai junto.</p></div>
+        <p class="eyebrow">O projeto</p>
+        <h2 class="reveal">Do problema do canteiro ao sistema no ar</h2>
+        <div class="grid-2 about">
+          <article class="card reveal">
+            <p class="card-kicker">O desafio</p>
+            <h3>O registro da obra vive no papel</h3>
+            <p>Em empreiteiras de pequeno e médio porte, etapa concluída, material consumido e horas trabalhadas ficam numa folha que molha, rasga e some. O prejuízo acontece todo dia, mas só aparece no fechamento.</p>
           </article>
-          <article class="card card-row reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            <div><h3>O pagamento vira chute</h3><p>CLT, diária, hora, empreitada: sem ponto registrado, ninguém sabe quanto pagar.</p></div>
-          </article>
-          <article class="card card-row reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
-            <div><h3>O material sai sem lastro</h3><p>Sai do estoque sem quantidade, sem obra de destino e sem o preço que foi pago.</p></div>
-          </article>
-          <article class="card card-row reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
-            <div><h3>O EPI fica sem ficha</h3><p>A NR-6 exige ficha com CA, data e assinatura. Sem ela, a multa vem na fiscalização.</p></div>
+          <article class="card card-feature reveal">
+            <p class="card-kicker">O que construímos</p>
+            <h3>Um registro, várias visões</h3>
+            <p>Um sistema web em que o mestre lança o dia pelo celular e a administração acompanha o custo real contra o contrato. A regra que guia tudo: <strong>o mestre enxerga quantidade, a administração enxerga dinheiro.</strong></p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- SOLUÇÃO -->
-    <section class="section section-alt" id="solucao">
-      <div class="container center">
-        <p class="eyebrow">A solução</p>
-        <h2 class="reveal">Não criamos rotina nova. Tiramos do papel o registro que a obra já faz.</h2>
         <div class="equation reveal" role="img" aria-label="Contrato menos material menos mão de obra igual a resultado">
           <span class="chip">Contrato</span><span class="op" aria-hidden="true">−</span>
           <span class="chip">Material</span><span class="op" aria-hidden="true">−</span>
           <span class="chip">Mão de obra</span><span class="op" aria-hidden="true">=</span>
           <span class="chip chip-gold">Resultado</span>
         </div>
-        <p class="lead lead-center reveal">Cada lançamento entra com data, quantidade e quem fez. <strong>O custo sobe na tela enquanto a obra anda</strong>, não só no fechamento.</p>
       </div>
     </section>
 
-    <!-- TRÊS VISÕES -->
+    <!-- FUNCIONALIDADES -->
+    <section class="section section-alt" id="funcionalidades">
+      <div class="container">
+        <p class="eyebrow">Funcionalidades</p>
+        <h2 class="reveal">O que o sistema faz</h2>
+        <div class="grid-3">
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <h3>Login e usuários</h3>
+            <p>Login com JWT, senha provisória gerada pelo sistema e troca obrigatória no primeiro acesso. Sem auto-cadastro: o admin cria cada conta.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+            <h3>Obras e etapas</h3>
+            <p>Carteira de obras com contrato, etapas com percentual concluído e atraso calculado pela data prevista.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+            <h3>Estoque em 3 fluxos</h3>
+            <p>Material de consumo por obra, EPI do depósito para o funcionário e ferramenta que sai e volta. Alerta de estoque mínimo.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3>Ponto por regime</h3>
+            <p>CLT, diária, hora e empreitada. As horas de cada pessoa viram custo de mão de obra da obra, automaticamente.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <h3>Ficha de EPI (NR-6)</h3>
+            <p>Entrega registrada com CA, data e assinatura, pronta para apresentar em fiscalização.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+            <h3>Clientes e fornecedores</h3>
+            <p>Cadastro de parceiros com CPF/CNPJ validado pelo dígito verificador e guardado cifrado no banco.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIS -->
     <section class="section">
       <div class="container">
-        <p class="eyebrow">Um registro, três visões</p>
-        <h2 class="reveal">Cada um vê só o que é seu</h2>
+        <p class="eyebrow">Perfis e permissões</p>
+        <h2 class="reveal">Cada pessoa vê só o que é dela</h2>
         <div class="grid-3">
           <article class="card card-role reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-.4-.4-2.1 2.5-2.5Z"/></svg>
             <h3>Mestre de obras</h3>
             <p class="pill">vê quantidade</p>
             <ul class="checks"><li>Marca a etapa concluída</li><li>Lança o material que saiu</li><li>Bate o ponto da equipe</li></ul>
           </article>
           <article class="card card-role card-feature reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
             <h3>Administração</h3>
             <p class="pill">vê dinheiro</p>
-            <ul class="checks"><li>Custo real contra o contrato</li><li>Margem de cada obra</li><li>Ficha de EPI digital</li></ul>
+            <ul class="checks"><li>Custo real contra o contrato</li><li>Margem de cada obra</li><li>Usuários e permissões</li></ul>
           </article>
           <article class="card card-role reveal">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
             <h3>Cliente</h3>
             <p class="pill">vê o andamento</p>
-            <ul class="checks"><li>Acesso por link, sem login</li><li>Etapas em tempo real</li><li>Sem ver custo ou salário</li></ul>
+            <ul class="checks"><li>Acesso por link com token</li><li>Sem login e sem senha</li><li>Sem ver custo ou salário</li></ul>
           </article>
         </div>
-        <p class="note reveal">O valor do contrato nem sai do servidor para o celular do mestre.</p>
+        <ul class="roles reveal" aria-label="Os seis perfis internos">
+          <li>Administrador</li><li>Engenheiro</li><li>Mestre de obras</li><li>Técnico de segurança</li><li>Almoxarife</li><li>Compras</li>
+        </ul>
       </div>
     </section>
 
-    <!-- RECURSOS -->
-    <section class="section section-alt" id="recursos">
+    <!-- ARQUITETURA -->
+    <section class="section section-alt" id="arquitetura">
       <div class="container">
-        <p class="eyebrow">O que o No Prumo entrega</p>
-        <h2 class="reveal">Tudo o que a obra registra, num lugar que não se perde</h2>
+        <p class="eyebrow">Arquitetura</p>
+        <h2 class="reveal">Clean Architecture em quatro camadas</h2>
+        <p class="lead reveal">Cada camada só conhece a de dentro. O domínio não sabe que existe banco, e a API não sabe como o banco guarda os dados.</p>
+        <ol class="layers">
+          <li class="layer reveal">
+            <span class="layer-num">01</span>
+            <div><h3>Presentation</h3><p>Controllers da Web API, autenticação JWT, políticas de autorização por permissão e Swagger.</p></div>
+          </li>
+          <li class="layer reveal">
+            <span class="layer-num">02</span>
+            <div><h3>Application</h3><p>DTOs separados por perfil, geração de token, senha provisória e o processamento seguro de CPF/CNPJ.</p></div>
+          </li>
+          <li class="layer reveal">
+            <span class="layer-num">03</span>
+            <div><h3>Infrastructure</h3><p><span translate="no">AppDbContext</span> com EF Core, migrations geradas por comando e rotina de seed de papéis, permissões e primeiro admin.</p></div>
+          </li>
+          <li class="layer layer-core reveal">
+            <span class="layer-num">04</span>
+            <div><h3>Domain</h3><p>36 entidades: obra, etapa, funcionário, ponto, estoque, ficha de EPI, empreitada, compras e financeiro.</p></div>
+          </li>
+        </ol>
+        <p class="note reveal">No front-end, React consome a API REST por <em>gateways</em>, um por recurso.</p>
+      </div>
+    </section>
+
+    <!-- DECISÕES -->
+    <section class="section" id="decisoes">
+      <div class="container">
+        <p class="eyebrow">Decisões técnicas</p>
+        <h2 class="reveal">Escolhas que protegem o dado e a regra de negócio</h2>
         <div class="grid-3">
-          <article class="card reveal"><h3>Ponto em 4 regimes</h3><p>CLT, diária, hora e empreitada, com o custo calculado automaticamente.</p></article>
-          <article class="card reveal"><h3>Ficha de EPI NR-6</h3><p>Entrega com CA, data e assinatura, pronta para a fiscalização.</p></article>
-          <article class="card reveal"><h3>Estoque que avisa</h3><p>Alerta de estoque mínimo antes que o material falte e a obra pare.</p></article>
-          <article class="card reveal"><h3>Margem ao vivo</h3><p>Custo acumulado contra o valor do contrato a cada lançamento.</p></article>
-          <article class="card reveal"><h3>Histórico real</h3><p>A base das obras passadas para orçar a próxima com lucro.</p></article>
-          <article class="card reveal"><h3>Dados protegidos</h3><p>6 perfis de acesso e CPF/CNPJ guardados cifrados no banco.</p></article>
+          <article class="card reveal"><h3>DTO por perfil</h3><p>O mestre recebe um DTO sem nenhum campo de valor. Esconder na tela não basta: se o dado viesse no JSON, qualquer um leria no DevTools.</p></article>
+          <article class="card reveal"><h3>Permissão, não papel</h3><p>As rotas pedem permissões como <code>manage_users</code> e <code>view_finance</code>. Mudar quem pode o quê é mexer no seed, não no código.</p></article>
+          <article class="card reveal"><h3>Saldo calculado</h3><p>O estoque nunca é um número digitado: é sempre a soma das movimentações, que funcionam como um razão contábil.</p></article>
+          <article class="card reveal"><h3>Status derivado</h3><p>“Atrasada” não é gravado no banco. É calculado comparando a data prevista com hoje, então nunca fica desatualizado.</p></article>
+          <article class="card reveal"><h3>Dados sensíveis cifrados</h3><p>CPF e CNPJ com AES-GCM e busca por HMAC-SHA256. Senhas com BCrypt. Chaves em User Secrets, fora do repositório.</p></article>
+          <article class="card reveal"><h3>Sem conta sem dono</h3><p>Quem cria o usuário não escolhe a senha: o sistema gera uma provisória e a pessoa troca no primeiro acesso.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- TECNOLOGIA -->
-    <section class="section">
-      <div class="container tech-grid">
-        <div>
-          <p class="eyebrow">Tecnologia</p>
-          <h2 class="reveal">Por baixo, código de verdade</h2>
-          <ul class="tags reveal" aria-label="Tecnologias usadas">
-            <li translate="no">C# · .NET 8</li>
-            <li translate="no">ASP.NET Core Web API</li>
-            <li translate="no">EF Core · MySQL 8</li>
-            <li translate="no">React · Vite · Tailwind</li>
-            <li>Clean Architecture</li>
-            <li>JWT · BCrypt · AES-GCM</li>
-            <li>IA no desenvolvimento</li>
-          </ul>
-          <p class="lead reveal"><strong>Escalável e ajustável:</strong> cresce com a empresa e se adapta à realidade de cada obra.</p>
-        </div>
-        <div class="tech-stats">
-          <div class="big-stat reveal"><span>37</span><p>tabelas no banco</p></div>
-          <div class="big-stat reveal"><span>6</span><p>perfis de acesso</p></div>
-          <div class="big-stat reveal"><span>4</span><p>regimes de contratação</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MERCADO + PLANO -->
-    <section class="section section-alt">
+    <!-- STACK -->
+    <section class="section section-alt" id="stack">
       <div class="container">
-        <div>
-          <p class="eyebrow">Mercado</p>
-          <h2 class="reveal">Um mercado do tamanho do Brasil</h2>
-          <dl class="market">
-            <div class="reveal"><dt>191 mil</dt><dd>empresas de construção</dd></div>
-            <div class="reveal"><dt>R$&nbsp;198,9&nbsp;bi</dt><dd>por ano só em edificações</dd></div>
-            <div class="reveal"><dt>2,5 mi</dt><dd>trabalhadores no setor</dd></div>
-          </dl>
-          <p class="src">Fonte: IBGE, Pesquisa Anual da Indústria da Construção 2024</p>
+        <p class="eyebrow">Stack</p>
+        <h2 class="reveal">Tecnologias usadas</h2>
+        <div class="stack-grid">
+          <div class="stack-col reveal">
+            <h3>Back-end</h3>
+            <ul class="tags">
+              <li translate="no">C#</li><li translate="no">.NET 8</li><li translate="no">ASP.NET Core Web API</li>
+              <li translate="no">EF Core 8</li><li translate="no">Pomelo</li><li translate="no">JWT</li><li translate="no">BCrypt</li><li translate="no">Swagger</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Front-end</h3>
+            <ul class="tags">
+              <li translate="no">React 19</li><li translate="no">Vite</li><li translate="no">Tailwind CSS</li><li translate="no">React Router</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Dados e ferramentas</h3>
+            <ul class="tags">
+              <li translate="no">MySQL 8</li><li>Migrations</li><li translate="no">Git · GitHub</li><li translate="no">Visual Studio</li><li>IA como apoio</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
