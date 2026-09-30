@@ -22,7 +22,7 @@ python3 -m http.server 4173
 ```
 index.html
 assets/css/style.css
-assets/js/main.js         animações de entrada
+assets/js/main.js         tema claro/escuro e animações de entrada
 assets/img/logo.svg       logo vetorial (mesma do sistema)
 assets/img/equipe/        fotos da equipe (480×480)
 vercel.json
